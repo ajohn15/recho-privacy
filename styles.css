@@ -29,6 +29,30 @@ main {
   padding: 72px 0 48px;
 }
 
+.site-nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-bottom: 34px;
+}
+
+.site-nav a {
+  padding: 7px 12px;
+  color: var(--muted);
+  font-size: 0.88rem;
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-radius: 999px;
+}
+
+.site-nav a:hover,
+.site-nav a:focus-visible,
+.site-nav a[aria-current="page"] {
+  color: #fff;
+  background: var(--surface);
+  border-color: var(--border);
+}
+
 header { margin-bottom: 42px; }
 
 .eyebrow,
@@ -77,6 +101,36 @@ h2 { margin: 0 0 15px; }
 p { margin: 0 0 15px; }
 p:last-child { margin-bottom: 0; }
 
+a {
+  color: var(--amber);
+  text-underline-offset: 0.18em;
+}
+
+a:hover { color: #ffc45f; }
+
+.support-link {
+  display: inline-block;
+  margin-top: 5px;
+  padding: 11px 16px;
+  color: #111;
+  font-weight: 700;
+  text-decoration: none;
+  background: var(--amber);
+  border-radius: 12px;
+}
+
+.support-link:hover {
+  color: #111;
+  background: #ffc45f;
+}
+
+.support-list {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.support-list li + li { margin-top: 8px; }
+
 footer {
   padding: 28px 4px 0;
   color: var(--muted);
@@ -84,7 +138,10 @@ footer {
   text-align: center;
 }
 
+footer p { margin-bottom: 5px; }
+
 @media (max-width: 520px) {
   main { padding-top: 44px; }
+  .site-nav { margin-bottom: 28px; }
   section { border-radius: 15px; }
 }
